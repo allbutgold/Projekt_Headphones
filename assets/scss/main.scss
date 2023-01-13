@@ -13,24 +13,19 @@
 * {
     margin: 0;
 }
-
 body {
     background-color: #2e2e2e;
     width: 1400px;
 }
-
 h2 {
     @include fontHeading
 }
-
 h3 {
     @include fontSubHeading
 }
-
 p {
     @include fontBody
 }
-
 a {
     @include fontBody
 }
@@ -136,6 +131,16 @@ a {
 }
 
 /* ======== lounger page styling ======== */
+/* container with background image */
+.loungerContainer {
+    position: absolute;
+    background-image: url(../img/section-voyager.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 800px;
+    height: 100vh;
+}
+/* section containing text align on the right side */
 .lounger {
     height: 80vh;
     @include flexContainer;
@@ -149,16 +154,17 @@ a {
     }
 }
 
-.loungerContainer {
+/* ======== experience page styling ======== */
+/* container with background image */
+.experienceContainer {
     position: absolute;
-    background-image: url(../img/section-voyager.jpg);
+    background-image: url(../img/section-experience-1.jpg);
     background-position: center;
     background-size: cover;
     width: 800px;
     height: 100vh;
 }
-
-/* ======== experience page styling ======== */
+/* section containing text align on the right side */
 .experience {
     height: 80vh;
     @include flexContainer;
@@ -171,16 +177,6 @@ a {
         }
     }
 }
-
-.experienceContainer {
-    position: absolute;
-    background-image: url(../img/section-experience-1.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 800px;
-    height: 100vh;
-}
-
 
 /* ======== inspiration page styling ======== */
 .inspirationContent {
@@ -237,6 +233,17 @@ a {
     
 }
 
+/* ======== shop page styling ======== */
+/* container with background image */
+.shopContainer {
+    position: absolute;
+    background-image: url(../img/section-composition4.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 850px;
+    height: 100vh;
+}
+/* section containing text and a image  */
 .shop {
     height: 80vh;
     width: 400px;
@@ -261,11 +268,3 @@ a {
     }
 }
 
-.shopContainer {
-    position: absolute;
-    background-image: url(../img/section-composition4.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 850px;
-    height: 100vh;
-}
