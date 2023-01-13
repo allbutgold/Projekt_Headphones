@@ -1,0 +1,271 @@
+/* ======== Imports ======== */
+
+@import "mixin.scss";
+@import "variables.scss";
+
+/* ======== Fonts ======== */
+@font-face {
+    font-family: workSans;
+    src: url(../fonts/WorkSans-Medium.ttf);
+}
+
+/* ======== gloabl settings ======== */
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #2e2e2e;
+    width: 1400px;
+}
+
+h2 {
+    @include fontHeading
+}
+
+h3 {
+    @include fontSubHeading
+}
+
+p {
+    @include fontBody
+}
+
+a {
+    @include fontBody
+}
+
+/* ======== global header ======== */
+.headerGlobal {
+    @include flexContainer;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    height: 80px;
+    width: 100vw;
+    #logoContainer {
+        width: 150px;
+        height: 150px;
+        #logo {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    div, a, p {
+        @include flexContainer;
+        @include fontHeading;;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* ======== navigation ======== */
+.nav {
+    position: absolute;
+    width: 80px;
+    margin-left: 50px;
+    margin-top: 100px;
+    @include flexContainer;
+    flex-wrap: wrap;
+    a {
+        margin-top: 50px;
+        @include fontBody;
+    }
+}
+
+/* ======== individual body heights ======== */
+#bodyLounger {
+    height: 100vh;
+}
+
+#bodyAbout {
+    @include backgroundColor;
+    height: 200vh;
+}
+
+#bodyInspiration {
+    height: 217vh;
+}
+
+/* ======== main Element About page ======== */
+.mainAbout {
+    h1 {
+        margin-top: 50px;
+        margin-left: 400px;
+        margin-bottom: 80px;
+        @include fontHeading;           
+        width: 350px;
+    }
+    .imgAbout {
+        margin: auto;
+        width: 1100px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    article {
+        @include flexContainer;
+        width: calc(100% - 200px);
+        margin-left: 100px;
+        margin-right: 100px;
+        height: 600px;        
+        figure {
+            width: 600px;
+            height: 350px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        div {
+            margin-left: 60px;
+            width: 600px;
+            
+            h2 {
+                @include fontHeading;
+                margin-bottom: 30px
+            }
+            p {
+                @include fontBody;
+            }
+        }
+    }
+    }
+}
+
+/* ======== lounger page styling ======== */
+.lounger {
+    height: 80vh;
+    @include flexContainer;
+    justify-content: flex-end;
+    div {
+        width: 40%;
+        margin-left: 40px;
+        h2 {
+            margin-bottom: 30px
+        }
+    }
+}
+
+.loungerContainer {
+    position: absolute;
+    background-image: url(../img/section-voyager.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 800px;
+    height: 100vh;
+}
+
+/* ======== experience page styling ======== */
+.experience {
+    height: 80vh;
+    @include flexContainer;
+    justify-content: flex-end;
+    div {
+        width: 40%;
+        margin-left: 40px;
+        h2 {
+            margin-bottom: 30px
+        }
+    }
+}
+
+.experienceContainer {
+    position: absolute;
+    background-image: url(../img/section-experience-1.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 800px;
+    height: 100vh;
+}
+
+
+/* ======== inspiration page styling ======== */
+.inspirationContent {
+    width: 800px;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 600px 200px 400px 400px;
+    article:nth-of-type(1) {
+        grid-row: 1/2;
+        grid-column: 1/2;    
+        margin-left: 50px;
+        margin-right: 50px;          
+    }
+    article:nth-of-type(2) {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        a {
+            @include button
+        }
+    }
+    article:nth-of-type(3) {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        figure {
+            width: 400px;
+            height: 400px;
+            img {
+                @include imgSizing;
+            }
+        }
+    }
+    article:nth-of-type(4) {
+        margin: auto auto auto 40px;
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+    article:nth-of-type(5) {
+        margin: auto  40px auto auto;
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+    article:nth-of-type(6) {
+        grid-row: 4/5;
+        grid-column: 2/3;
+        figure {
+            width: 400px;
+            height: 400px;
+            img {
+                @include imgSizing;
+            }
+        }
+    }
+    
+}
+
+.shop {
+    height: 80vh;
+    width: 400px;
+    margin-left: 1000px;
+    @include flexContainer;
+    flex-wrap: wrap;
+    justify-content: center;
+    div:nth-of-type(2) {
+        @include flexContainer;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 200px;
+        p, a{
+            margin-top: 10px;
+            text-align: center;
+            width: 150px;
+        }
+        a  {
+            @include button;
+        }
+    }
+}
+
+.shopContainer {
+    position: absolute;
+    background-image: url(../img/section-composition4.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 850px;
+    height: 100vh;
+}
