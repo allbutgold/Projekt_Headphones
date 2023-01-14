@@ -1,8 +1,8 @@
 /* ======== Imports ======== */
 /* ======== Fonts ======== */
 @font-face {
-  font-family: workSans;
-  src: url(../fonts/WorkSans-Medium.ttf);
+  font-family: workSansLight;
+  src: url(../fonts/WorkSans-Light.ttf);
 }
 /* ======== gloabl settings ======== */
 * {
@@ -15,26 +15,27 @@ body {
 }
 
 h2 {
-  font-family: workSans;
+  font-family: workSansLight;
   color: #ebccc2;
   text-decoration: none;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-family: workSans;
+  font-family: workSansLight;
   color: #ebccc2;
   text-decoration: none;
 }
 
 p {
-  font-family: workSans;
+  font-family: workSansLight;
   color: #fff;
   opacity: 60%;
   text-decoration: none;
 }
 
 a {
-  font-family: workSans;
+  font-family: workSansLight;
   color: #fff;
   opacity: 60%;
   text-decoration: none;
@@ -61,8 +62,9 @@ a {
 .headerGlobal div, .headerGlobal a, .headerGlobal p {
   display: flex;
   align-items: center;
-  font-family: workSans;
-  color: #ebccc2;
+  font-family: workSansLight;
+  color: #fff;
+  opacity: 60%;
   text-decoration: none;
   margin-left: 10px;
   margin-right: 10px;
@@ -80,7 +82,7 @@ a {
 }
 .nav a {
   margin-top: 50px;
-  font-family: workSans;
+  font-family: workSansLight;
   color: #fff;
   opacity: 60%;
   text-decoration: none;
@@ -105,9 +107,10 @@ a {
   margin-top: 50px;
   margin-left: 400px;
   margin-bottom: 80px;
-  font-family: workSans;
+  font-family: workSansLight;
   color: #ebccc2;
   text-decoration: none;
+  font-size: 2.5rem;
   width: 350px;
 }
 .mainAbout .imgAbout {
@@ -141,33 +144,15 @@ a {
   width: 600px;
 }
 .mainAbout .imgAbout article div h2 {
-  font-family: workSans;
-  color: #ebccc2;
-  text-decoration: none;
+  /* @include fontHeading; */
   margin-bottom: 30px;
 }
 .mainAbout .imgAbout article div p {
-  font-family: workSans;
-  color: #fff;
-  opacity: 60%;
-  text-decoration: none;
+  /* @include fontBody; */
 }
 
 /* ======== lounger page styling ======== */
-.lounger {
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.lounger div {
-  width: 40%;
-  margin-left: 40px;
-}
-.lounger div h2 {
-  margin-bottom: 30px;
-}
-
+/* container with background image */
 .loungerContainer {
   position: absolute;
   background-image: url(../img/section-voyager.jpg);
@@ -177,21 +162,26 @@ a {
   height: 100vh;
 }
 
-/* ======== experience page styling ======== */
-.experience {
+/* section containing text align on the right side */
+.lounger {
   height: 80vh;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-.experience div {
-  width: 40%;
-  margin-left: 40px;
+.lounger div {
+  width: 30%;
+  margin-right: 100px;
 }
-.experience div h2 {
-  margin-bottom: 30px;
+.lounger div h2 {
+  margin-bottom: 100px;
+}
+.lounger div p {
+  line-height: 32px;
 }
 
+/* ======== experience page styling ======== */
+/* container with background image */
 .experienceContainer {
   position: absolute;
   background-image: url(../img/section-experience-1.jpg);
@@ -199,6 +189,24 @@ a {
   background-size: cover;
   width: 800px;
   height: 100vh;
+}
+
+/* section containing text align on the right side */
+.experience {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.experience div {
+  width: 30%;
+  margin-right: 100px;
+}
+.experience div h2 {
+  margin-bottom: 100px;
+}
+.experience div p {
+  line-height: 32px;
 }
 
 /* ======== inspiration page styling ======== */
@@ -221,9 +229,9 @@ a {
 }
 .inspirationContent article:nth-of-type(2) a {
   border: 1px solid white;
-  border-radius: 5px;
-  padding: 1%;
-  margin: 2%;
+  border-radius: 2px;
+  padding: 1px;
+  line-height: 25px;
 }
 .inspirationContent article:nth-of-type(3) {
   grid-row: 3/4;
@@ -264,6 +272,18 @@ a {
   object-position: center;
 }
 
+/* ======== shop page styling ======== */
+/* container with background image */
+.shopContainer {
+  position: absolute;
+  background-image: url(../img/section-composition4.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 850px;
+  height: 100vh;
+}
+
+/* section containing text and a image  */
 .shop {
   height: 80vh;
   width: 400px;
@@ -288,18 +308,8 @@ a {
 }
 .shop div:nth-of-type(2) a {
   border: 1px solid white;
-  border-radius: 5px;
-  padding: 1%;
-  margin: 2%;
-}
-
-.shopContainer {
-  position: absolute;
-  background-image: url(../img/section-composition4.jpg);
-  background-position: center;
-  background-size: cover;
-  width: 850px;
-  height: 100vh;
+  border-radius: 2px;
+  padding: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */

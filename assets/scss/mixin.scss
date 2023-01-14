@@ -1,21 +1,23 @@
+
 @mixin backgroundColor {
     background-color:#2e2e2e;
 }
 
 @mixin fontHeading {
-    font-family: workSans;
+    font-family: workSansLight;
     color: #ebccc2;
     text-decoration: none;
+    font-size: 2.5rem;
 }
 
 @mixin fontSubHeading {
-    font-family: workSans;
+    font-family: workSansLight;
     color: #ebccc2;
     text-decoration: none;
 }
 
 @mixin fontBody {
-    font-family: workSans;
+    font-family: workSansLight;
     color: #fff;
     opacity: 60%;
     text-decoration: none;
@@ -35,7 +37,7 @@
 
 @mixin button {
     border: 1px solid white;
-    border-radius: 5px;
-    padding: 1%;
-    margin: 2%;
+    border-radius: 2px;
+    padding: 1px;
+
 }

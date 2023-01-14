@@ -5,8 +5,8 @@
 
 /* ======== Fonts ======== */
 @font-face {
-    font-family: workSans;
-    src: url(../fonts/WorkSans-Medium.ttf);
+    font-family: workSansLight;
+    src: url(../fonts/WorkSans-Light.ttf);
 }
 
 /* ======== gloabl settings ======== */
@@ -48,7 +48,7 @@ a {
     }
     div, a, p {
         @include flexContainer;
-        @include fontHeading;;
+        @include fontBody;
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -119,11 +119,11 @@ a {
             width: 600px;
             
             h2 {
-                @include fontHeading;
+                /* @include fontHeading; */
                 margin-bottom: 30px
             }
             p {
-                @include fontBody;
+                /* @include fontBody; */
             }
         }
     }
@@ -146,10 +146,13 @@ a {
     @include flexContainer;
     justify-content: flex-end;
     div {
-        width: 40%;
-        margin-left: 40px;
+        width: 30%;
+        margin-right: 100px;
         h2 {
-            margin-bottom: 30px
+            margin-bottom: 100px
+        }
+        p {
+            line-height: 32px;
         }
     }
 }
@@ -170,10 +173,13 @@ a {
     @include flexContainer;
     justify-content: flex-end;
     div {
-        width: 40%;
-        margin-left: 40px;
+        width: 30%;
+        margin-right: 100px;
         h2 {
-            margin-bottom: 30px
+            margin-bottom: 100px
+        }
+        p {
+            line-height: 32px;
         }
     }
 }
@@ -195,7 +201,8 @@ a {
         grid-row: 2/3;
         grid-column: 1/2;
         a {
-            @include button
+            @include button;
+            line-height: 25px
         }
     }
     article:nth-of-type(3) {
@@ -267,4 +274,3 @@ a {
         }
     }
 }
-
