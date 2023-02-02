@@ -16,7 +16,20 @@
 
 .darkMode {
     background-color: antiquewhite;
-    color: black;
+    main h1 {
+        color: #2e2e2e;
+        opacity: 80%;
+    }
+    main p, h1, h2, {
+        color:#2e2e2e;
+    }
+    header div a p {
+        color: black;
+        opacity: 100%;
+    }
+    nav a {
+        color: black;;
+    }
 }
 
 body::-webkit-scrollbar {
@@ -25,7 +38,7 @@ body::-webkit-scrollbar {
 
 body 
 {
-    background-color: #2e2e2e;
+    
     width: 1400px;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -71,34 +84,63 @@ a {
 
 /* ======== navigation ======== */
 .nav {
-    position: sticky;
+    position: fixed;
     top: 60px;
-    width: 80px;
+    width: 100px;
     margin-left: 50px;
     margin-top: 100px;
     @include flexContainer;
     flex-wrap: wrap;
     a {
+        width: 100px;
         margin-top: 50px;
         @include fontBody;
     }
+    :hover {
+        opacity: 100%;
+    }
+}
+#navItemInspiration {
+    opacity: 100%;
+}
+#navItemExperience {
+    opacity: 100%;
+}
+#navItemLounger {
+    opacity: 100%;
+}
+#navItemAbout {
+    opacity: 100%;
+}
+#navItemShop {
+    opacity: 100%;
 }
 
 /* ======== individual body heights ======== */
 #bodyLounger {
     height: 100vh;
+    background-color: #2e2e2e;
 }
 
-#bodyAbout {
-    @include backgroundColor;
+.bodyAbout {
+    background-color: #2e2e2e;
     height: 200vh;
 }
 
 #bodyInspiration {
-    height: 217vh;
+    height: 220vh;
+    background-color: #2e2e2e;
 }
 
-/* ======== main Element About page ======== */
+#bodyExperience {
+    background-color: #2e2e2e;
+}
+
+#bodyShop {
+    background-color: #2e2e2e;
+}
+
+/* ======== About page main Element ======== */
 .mainAbout {
     position: absolute;
     margin-top: 100px;
@@ -206,7 +248,6 @@ a {
 }
 
 /* ======== inspiration page styling ======== */
-
 .mainInspiration {
     display: flex;
     justify-content: center;
@@ -295,8 +336,11 @@ a {
     width: 850px;
     height: 100vh;
 }
+
 /* section containing text and a image  */
 .shop {
+    position: absolute;
+    top: 50px;
     height: 80vh;
     width: 400px;
     margin-left: 1000px;
